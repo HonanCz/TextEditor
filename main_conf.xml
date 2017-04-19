@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Konfigurační soubor imaginárního TextEditoru -->
+<!-- root_conf: Kořenový element -->
+<root_conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="main_conf.xsd">
+    <!-- default_conf: Výchozí nastavení 
+    (obsahuje veškeré nastavení) -->
+    <default_conf>
+        <!-- nastaveni: Nastavení programu -->
+        <nastaveni>
+            <!-- obsah: Úpravy textu aj. -->
+            <obsah>
+                <!-- zalamovani_textu: Pokud je hodnota true, pak textový editor zalamuje řádky -->
+                <zalamovani_textu hodnota="true" />
+                <!-- rozdelovani_slov: Rozdělovat slova na dva řádky -->
+                <rozdelovani_slov hodnota="false" />
+                <!-- cislovani_radku: Zobrazí vlevo sloupec pro číslování řádků -->
+                <cislovani_radku hodnota="false" />
+                <!-- zvyraznovani: Zvýrazňování textu -->
+                <zvyraznovani>
+                    <!-- aktualni_radek: Obarví pozadí aktuálního řádku -->
+                    <aktualni_radek hodnota="false" />
+                    <!-- odpovidajici_zavorka: Obarví odpovídající závorku -->
+                    <odpovidajici_zavorka hodnota="false" />
+                </zvyraznovani>
+                <!-- tabulator: Nastavení tabulátoru -->
+                <tabulator>
+                    <!-- sirka: Šířka tabulátoru -->
+                    <sirka hodnota="8" />
+                    <!-- vkladat_mezery: Vkládat mezery místo tabulátorů -->
+                    <vkladat_mezery hodnota="false" />
+                </tabulator>
+            </obsah>
+            <!-- ukladani: Způsoby automatického ukládání -->
+            <ukladani>
+                <!-- zalozni_kopie: Vytváří záložní kopii souborů během editace -->
+                <zalozni_kopie hodnota="true" />
+                <!-- automaticky_ukladat: Automaticky uloží soubor každých x minut -->
+                <automaticky_ukladat ukladat="false" minuty="5" /> 
+            </ukladani>
+            <!-- jazyk: Lokalizace programu -->
+            <jazyk>
+                <!-- lokalizace: Zkratka určuje o jakou lokalizaci se jedná -->
+                <lokalizace hodnota="en" />
+            </jazyk>
+            <!-- moduly: Dostupné rozšíření programu -->
+            <moduly>
+                <!-- dokoncovani_slov: Jednoduchá forma predikce -->
+                <dokoncovani_slov hodnota="false" />
+                <!-- doplnovani_zavorek: Doplňuje párovou závorku -->
+                <doplnovani_zavorek hodnota="false" />
+                <!-- kontrola_pravopisu: Zvýrazňuje chybně napsaná slova -->
+                <kontrola_pravopisu hodnota="true" />
+                <!-- statistika_dokumentu: Vyhodnocení dokumentu -->
+                <statistika_dokumentu hodnota="true" />
+                <!-- vlozit_datum: Automaticky vkládát čas a datum -->
+                <vlozit_datum hodnota="false" />
+            </moduly>
+            <!-- aktualizace: Kontrola aktualizací -->
+            <aktualizace>
+                <!-- kontrola_aktualizac: Automaticky: auto, Ručně: man, Zakázáno: disabled -->
+                <kontrola_aktualizaci hodnota="auto" />
+            </aktualizace>
+        </nastaveni>
+        <!-- po_spusteni: Konfigurace po spuštění -->
+        <po_spusteni>
+            <!-- rozhraní: Nastavení vzhledu -->
+            <rozhrani>
+                <!-- pismo: Výchozí písmo -->
+                <pismo font="Monospace Normal" velikost="12" />
+                <!-- vstup: text: režim textového editoru, kod: režim editoru zdrojového kódu  -->
+                <vstup hodnota="text" />
+                <!-- velikost_okna: Přednastaví velikost okna v px  -->
+                <velikost_okna sirka="800" vyska="600" />
+                <!-- barevne_schema: Název barevného schéma  -->
+                <barevne_schema hodnota="Classic" />
+                <!-- rozsirena_nabidka: Zobrazí doplnujici moznosti u ovladacich prvku  -->
+                <rozsirena_nabidka hodnota="false" />
+                <!-- stavovy_radek: Zobrazí stavový řádek  -->
+                <stavovy_radek hodnota="true" />
+            </rozhrani>
+            <!-- hardware: Dostupná zařízení pro tisk aj. -->
+            <hardware>
+                <!-- vstupni: Obsahuje jednotlivá zařízení, null v případě, že není k dispozici žádné -->
+                <vstupni>
+                    <!-- zarizeni: Název zařízení -->
+                    <zarizeni>null</zarizeni>
+                </vstupni>
+                <vystupni>
+                    <zarizeni>PDF Printer</zarizeni>                    
+                </vystupni>
+            </hardware>
+            <!-- dokumenty: Seznam dříve zpracovávaných dokumentů
+            (obsahuje jednotlivé cesty, null v případě, že není k dispozici žádná) -->
+            <dokumenty>
+                <!-- cesta: Adresa cesty -->
+                <cesta>null</cesta>
+            </dokumenty>
+        </po_spusteni>
+    </default_conf>
+    <!-- user_conf: Uživatelské nastavení 
+    (obsahuje pouze nastavení, které se liší od výchozího,
+    komentáře nejsou obsaženy, lze si je přečíst v default_conf.) -->
+    <user_conf>
+        <nastaveni>
+            <obsah>
+                <cislovani_radku hodnota="true" />
+            </obsah>
+            <jazyk>
+                <lokalizace hodnota="cs" />
+            </jazyk>
+            <moduly>
+                <kontrola_pravopisu hodnota="false" />
+            </moduly>
+        </nastaveni>
+        <po_spusteni>
+            <rozhrani>
+                <vstup hodnota="kod" />
+                <velikost_okna sirka="1024" vyska="600" />
+                <barevne_schema hodnota="Dark" />
+            </rozhrani>
+            <hardware>
+                <vstupni>
+                    <zarizeni>Scanner XPS 500</zarizeni>
+                </vstupni>
+                <vystupni>
+                    <zarizeni>Bluetooth Printer</zarizeni>
+                    <zarizeni>Profil Printer 700</zarizeni>                     
+                </vystupni>
+            </hardware>
+            <dokumenty>
+                <cesta>C:\Users\Honan\Documents\NetBeansProjects\Kalina_TextEditor\main_conf.xml</cesta>
+                <cesta>C:\Users\Honan\Documents\NetBeansProjects\Kalina_TextEditor\main_conf.xsd</cesta>                
+            </dokumenty>
+        </po_spusteni>     
+    </user_conf>
+</root_conf>

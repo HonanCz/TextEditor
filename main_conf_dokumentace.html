@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TextEditor - Dokumentace - Kalina</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table, td {
+                border: 1px solid black;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Dokumentace ke konfiguračnímu souboru programu TextEditor</h1>
+            <h2>k předmětu Značkovací jazyky.</h2>
+        </header>
+        <nav id="menu">
+            <h2>Seznam odkazů</h2>
+		<ol>
+                    <li><a href="#menu">Obsah s odkazy</a></li>
+                    <li><a href="#uvod">Úvod</a></li>
+                    <li><a href="#metodika">Metodika</a></li>
+                    <li><a href="#tabulka">Popis elementů a atributů</a></li>
+                    <li><a href="#transformace">Popis transformace</a></li>
+                    <li><a href="#zaver">Závěr</a></li>
+                    <li><a href="#paticka">Patička</a></li>
+		</ol>
+	</nav>
+        <main> 
+            <section id="uvod">
+                <article>
+                    <header>
+                        <h2>Úvod</h2>
+                        <p>Tento dokument slouží jako dokumentace k XML konfiguračnímu souboru smyšleného programu <strong>TextEditor</strong>, zároveň je semestrální prací k předmětu Značkovací jazyky.</p>
+                        <p>Dále je obsaženo: XSD Schéma, XSL Transformace do JSON a textový soubor s odkazem na Github.</p>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+            <section id="metodika">
+                <article>
+                    <header>
+                        <h2>Metodika</h2>
+                        <p>Práce začala tvorbou XML a XSD současně. Primárně jsem čerpal ze souborů vytvořených na cvičení, v několika málo situacích jsem využil také některé zdroje na internetu (stackoverflow, w3schools aj.).</p>
+                        <p>K tvorbě bylo využito vývojové prostředí NetBeans, velmi nápomocná mi byla především funkce Validovat XML, díky které jsem si mohl každou nově přidanou část zkontrolovat. Nevyužíval jsem žádné jiné nástroje jako jsou generátory XSD apod., vše je napsané ručně.</p>
+                        <p>Na základě výše zmíněných souborů byl po jejich dokončení vytvořen soubor XSL, ten byl nakonec transformován do JSON pomocí NetBeans. Finální verze byla nahrána na Github.</p>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+            <section id="tabulka">
+                <article>
+                    <header>
+                        <h2>Popis elementů a atributů</h2>
+                        <div style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                        <table>
+                            <tr>
+                                <th>Název elementu</th>
+                                <th>Popis</th>
+                            </tr>
+                            <tr>
+                                <td>root_conf</td>
+                                <td>Kořenový element</td>
+                            </tr>
+                            <tr>
+                                <td>default_conf</td>
+                                <td>Výchozí nastavení</td>
+                            </tr>
+                            <tr>
+                                <td>user_conf</td>
+                                <td>Uživatelská nastavení</td>
+                            </tr>
+                            <tr>
+                                <td>nastaveni</td>
+                                <td>Nastavení programu </td>
+                            </tr>
+                            <tr>
+                                <td>obsah</td>
+                                <td>Úpravy textu aj.</td>
+                            </tr>
+                            <tr>
+                                <td>zalamovani_textu</td>
+                                <td>Pokud je hodnota true, pak textový editor zalamuje řádky</td>
+                            </tr>
+                            <tr>
+                                <td>rozdelovani_slov</td>
+                                <td>Rozdělovat slova na dva řádky</td>
+                            </tr>
+                            <tr>
+                                <td>cislovani_radku</td>
+                                <td>Zobrazí vlevo sloupec pro číslování řádků</td>
+                            </tr>
+                            <tr>
+                                <td>zvyraznovani</td>
+                                <td>Zvýrazňování textu</td>
+                            </tr>
+                            <tr>
+                                <td>aktualni_radek</td>
+                                <td>Obarví pozadí aktuálního řádku</td>
+                            </tr>
+                            <tr>
+                                <td>odpovidajici_zavorka</td>
+                                <td>Obarví odpovídající závorku</td>
+                            </tr>
+                            <tr>
+                                <td>tabulator</td>
+                                <td>Nastavení tabulátoru</td>
+                            </tr>
+                            <tr>
+                                <td>sirka</td>
+                                <td>Šířka tabulátoru</td>
+                            </tr>
+                            <tr>
+                                <td>vkladat_mezery</td>
+                                <td>Vkládat mezery místo tabulátorů</td>
+                            </tr>
+                            <tr>
+                                <td>ukladani</td>
+                                <td>Způsoby automatického ukládání</td>
+                            </tr>
+                            <tr>
+                                <td>zalozni_kopie</td>
+                                <td>Vytváří záložní kopii souborů během editace</td>
+                            </tr>
+                            <tr>
+                                <td>automaticky_ukladat</td>
+                                <td>Automaticky uloží soubor každých x minut</td>
+                            </tr>
+                            <tr>
+                                <td>jazyk</td>
+                                <td>Lokalizace programu</td>
+                            </tr>
+                            <tr>
+                                <td>lokalizace</td>
+                                <td>Zkratka určuje o jakou lokalizaci se jedná</td>
+                            </tr>
+                            <tr>
+                                <td>moduly</td>
+                                <td>Dostupné rozšíření programu</td>
+                            </tr>
+                            <tr>
+                                <td>dokoncovani_slov</td>
+                                <td>Jednoduchá forma predikce</td>
+                            </tr>
+                            <tr>
+                                <td>doplnovani_zavorek</td>
+                                <td>Doplňuje párovou závorku</td>
+                            </tr>
+                            <tr>
+                                <td>kontrola_pravopisu</td>
+                                <td>Zvýrazňuje chybně napsaná slova</td>
+                            </tr>
+                            <tr>
+                                <td>statistika_dokumentu</td>
+                                <td>Vyhodnocení dokumentu</td>
+                            </tr>
+                            <tr>
+                                <td>vlozit_datum</td>
+                                <td>Automaticky vkládát čas a datum</td>
+                            </tr>
+                            <tr>
+                                <td>aktualizace</td>
+                                <td>Kontrola aktualizací</td>
+                            </tr>
+                            <tr>
+                                <td>kontrola_aktualizaci</td>
+                                <td>Automaticky: auto, Ručně: man, Zakázáno: disabled</td>
+                            </tr>
+                            <tr>
+                                <td>po_spusteni</td>
+                                <td>Konfigurace po spuštění</td>
+                            </tr>
+                            <tr>
+                                <td>rozhrani</td>
+                                <td>Nastavení vzhledu</td>
+                            </tr>
+                            <tr>
+                                <td>pismo</td>
+                                <td>Výchozí písmo</td>
+                            </tr>
+                            <tr>
+                                <td>vstup</td>
+                                <td>text: režim textového editoru, kod: režim editoru zdrojového kódu</td>
+                            </tr>
+                            <tr>
+                                <td>velikost_okna</td>
+                                <td>Přednastaví velikost okna v px</td>
+                            </tr>
+                            <tr>
+                                <td>barevne_schema</td>
+                                <td>Název barevného schéma</td>
+                            </tr>
+                            <tr>
+                                <td>rozsirena_nabidka</td>
+                                <td>Zobrazí doplňující možnosti u ovládacích prvků</td>
+                            </tr>
+                            <tr>
+                                <td>stavovy_radek</td>
+                                <td>Zobrazí stavový řádek</td>
+                            </tr>
+                            <tr>
+                                <td>hardware</td>
+                                <td>Dostupná zařízení pro tisk aj.</td>
+                            </tr>
+                            <tr>
+                                <td>vstupni</td>
+                                <td>Obsahuje jednotlivá vstupní zařízení, null v případě, že není k dispozici žádné</td>
+                            </tr>
+                            <tr>
+                                <td>vystupni</td>
+                                <td>Obsahuje jednotlivá výstupní zařízení, null v případě, že není k dispozici žádné</td>
+                            </tr>
+                            <tr>
+                                <td>zarizeni</td>
+                                <td>Název zařízení</td>
+                            </tr>
+                            <tr>
+                                <td>dokumenty</td>
+                                <td>Seznam dříve zpracovávaných dokumentů</td>
+                            </tr>
+                            <tr>
+                                <td>cesta</td>
+                                <td>Adresa cesty</td>
+                            </tr>                           
+                        </table> 
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Název atributu</th>
+                                <th>Typ</th>
+                                <th>Restrikce</th>
+                            </tr>
+                            <tr>
+                                <td>zalamovani_textu/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>rozdelovani_slov<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>cislovani_radku/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>aktualni_radek/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>odpovidajici_zavorka/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>sirka/<strong>hodnota</strong></td>
+                                <td>nonNegativeInteger</td>
+                                <td>minInclusive=1; maxInclusive=250</td>
+                            </tr>
+                            <tr>
+                                <td>vkladat_mezery/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>zalozni_kopie/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>automaticky_ukladat/<strong>ukladat</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>automaticky_ukladat/<strong>minuty</strong></td>
+                                <td>nonNegativeInteger</td>
+                                <td>minInclusive=1; maxInclusive=120</td>
+                            </tr>
+                            <tr>
+                                <td>lokalizace/<strong>hodnota</strong></td>
+                                <td>string</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>dokoncovani_slov/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>doplnovani_zavorek/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>kontrola_pravopisu/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>statistika_dokumentu/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>vlozit_datum/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>kontrola_aktualizaci/<strong>hodnota</strong></td>
+                                <td>string</td>
+                                <td>enumeration: auto, man, disabled</td>
+                            </tr>
+                            <tr>
+                                <td>pismo/<strong>font</strong></td>
+                                <td>string</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>pismo/<strong>velikost</strong></td>
+                                <td>nonNegativeInteger</td>
+                                <td>minInclusive=1; maxInclusive=1024</td>
+                            </tr>
+                            <tr>
+                                <td>vstup/<strong>hodnota</strong></td>
+                                <td>string</td>
+                                <td>enumeration: text, kod</td>
+                            </tr>
+                            <tr>
+                                <td>velikost_okna/<strong>sirka</strong></td>
+                                <td>nonNegativeInteger</td>
+                                <td>minInclusive=300; maxInclusive=4096</td>
+                            </tr>
+                            <tr>
+                                <td>velikost_okna/<strong>vyska</strong></td>
+                                <td>nonNegativeInteger</td>
+                                <td>minInclusive=200; maxInclusive=2304</td>
+                            </tr>
+                            <tr>
+                                <td>barevne_schema/<strong>hodnota</strong></td>
+                                <td>string</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>rozsirena_nabidka/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>stavovy_radek/<strong>hodnota</strong></td>
+                                <td>boolean</td>
+                                <td>/</td>
+                            </tr>                           
+                        </table>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+            <section id="transformace">
+                <article>
+                    <header>
+                        <h2>Popis transformace</h2>
+                        <p>Transformací získáme data z XML souboru v podobě, ve které je program schopen tyto data dále zpracovat.</p>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+            <section id="zaver">
+                <article>
+                    <header>
+                        <h2>Závěr</h2>
+                        <p>Zadání seminární práce považuji za přiměřeně náročné, seznámení s XML a XSD hodnotím také kladně, užitečná zkušenost.</p>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+            <section id="paticka">
+                <article>
+                    <header>
+                        <hr/>
+                        <p><a href="https://is.czu.cz/auth/lide/clovek.pl?id=172384">Jan Kalina</a>, <a href="https://github.com/HonanCz/TextEditor.git">Github</a>, PO 12:15 Lichý</p>
+                    </header>
+                    <p></p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

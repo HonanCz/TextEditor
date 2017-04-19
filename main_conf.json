@@ -1,0 +1,264 @@
+
+    {
+        
+        "root_conf": 
+        {
+            
+            "default_conf": 
+            {
+                
+                "nastaveni": 
+                {              
+                    
+                    "obsah": 
+                    {
+                        
+                        "zalamovani_textu": 
+                        {
+                            "hodnota": "true"
+                        } 
+                        
+                        "rozdelovani_slov": 
+                        {
+                            "hodnota": "false"
+                        } 
+                        
+                        "cislovani_radku": 
+                        {
+                            "hodnota": "false"
+                        } 
+                        
+                        "zvyraznovani": 
+                        {
+                            
+                            "aktualni_radek": 
+                            {
+                                "hodnota": "false"
+                            } 
+                            
+                            "odpovidajici_zavorka": 
+                            {
+                                "hodnota": "false"
+                            } 
+                            
+                        } 
+                        
+                        "tabulator": 
+                        {
+                            
+                            "sirka": 
+                            {
+                                "hodnota": "8"
+                            } 
+                            
+                            "vkladat_mezery": 
+                            {
+                                "hodnota": "false"
+                            } 
+                            
+                        } 
+                        
+                    } 
+                    
+                    "ukladani": 
+                    {
+                        
+                        "zalozni_kopie": 
+                        {
+                            "hodnota": "true"  
+                        } 
+                        
+                        "automaticky_ukladat": 
+                        {
+                            "ukladat": "false",
+                            "minuty": "5"  
+                        } 
+                        
+                    } 
+                    
+                    "moduly": 
+                    {
+                        
+                        "dokoncovani_slov": 
+                        {
+                            "hodnota": "false"  
+                        } 
+                        
+                        "doplnovani_zavorek": 
+                        {
+                            "hodnota": "false"  
+                        } 
+                        
+                        "kontrola_pravopisu": 
+                        {
+                            "hodnota": "true"  
+                        } 
+                        
+                        "statistika_dokumentu": 
+                        {
+                            "hodnota": "true"  
+                        } 
+                        
+                        "vlozit_datum": 
+                        {
+                            "hodnota": "false"  
+                        } 
+                        
+                    } 
+                    
+                    "aktualizace": 
+                    {
+                        
+                        "kontrola_aktualizaci": 
+                        {
+                            "hodnota": "auto"  
+                        } 
+                        
+                    } 
+                     
+                } 
+                
+                "po_spusteni": 
+                { 
+                    
+                    "rozhrani": 
+                    {
+                        
+                        "pismo": 
+                        {
+                            "font": "Monospace Normal",
+                            "velikost": "12"
+                        } 
+                        
+                        "vstup": 
+                        {
+                            "hodnota": "text"
+                        } 
+                        
+                        "velikost_okna": 
+                        {
+                            "sirka": "800",
+                            "vyska": "600"
+                        } 
+                        
+                        "barevne_schema": 
+                        {
+                            "hodnota": "Classic"
+                        } 
+                        
+                        "rozsirena_nabidka": 
+                        {
+                            "hodnota": "false"
+                        } 
+                        
+                        "stavovy_radek": 
+                        {
+                            "hodnota": "true"
+                        } 
+                        
+                    } 
+                    
+                    "hardware": 
+                    {
+                        
+                        "vstupni": 
+                        {
+                            "zarizeni": "null"
+                        } 
+                        
+                        "vystupni": 
+                        {
+                            "zarizeni": "PDF Printer"
+                        } 
+                        
+                    } 
+                    
+                    "dokumenty": 
+                    {
+                        "cesta": "null"
+                    } 
+                    
+                } 
+                             
+            }
+            
+            "user_conf": 
+            {
+                
+                "nastaveni": 
+                {              
+                    
+                    "obsah": 
+                    {
+                        
+                        "cislovani_radku": 
+                        {
+                            "hodnota": "true"
+                        } 
+                        
+                    } 
+                    
+                    "moduly": 
+                    {                   
+                        
+                        "kontrola_pravopisu": 
+                        {
+                            "hodnota": "false"  
+                        } 
+                        
+                    } 
+                       
+                } 
+                
+                "po_spusteni": 
+                { 
+                    
+                    "rozhrani": 
+                    {
+                        
+                        "vstup": 
+                        {
+                            "hodnota": "kod"
+                        } 
+                        
+                        "velikost_okna": 
+                        {
+                            "sirka": "1024",
+                            "vyska": "600"
+                        } 
+                        
+                        "barevne_schema": 
+                        {
+                            "hodnota": "Dark"
+                        } 
+                        
+                    } 
+                    
+                    "hardware": 
+                    {
+                        
+                        "vstupni": 
+                        {
+                            "zarizeni": "Scanner XPS 500"
+                        } 
+                        
+                        "vystupni": 
+                        {
+                            "zarizeni": "Bluetooth Printer"
+                        } 
+                        
+                    } 
+                    
+                    "dokumenty": 
+                    {
+                        "cesta": "C:\Users\Honan\Documents\NetBeansProjects\Kalina_TextEditor\main_conf.xml"
+                    } 
+                    
+                } 
+                    
+            } 
+                              
+        }
+        
+    }
+    

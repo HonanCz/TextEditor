@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+           
+    <xs:element name="root_conf">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="default_conf">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nastaveni">
+                                <xs:complexType>
+                                   <xs:all>
+                                       <xs:element name="obsah">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="zalamovani_textu">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="rozdelovani_slov">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="cislovani_radku">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="zvyraznovani">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="aktualni_radek">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="odpovidajici_zavorka">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="tabulator">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="sirka">
+                                                                    <xs:complexType>                                                                       
+                                                                        <xs:attribute name="hodnota">
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:nonNegativeInteger">
+                                                                                    <xs:minInclusive value="1"/>
+                                                                                    <xs:maxInclusive value="250"/>
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:attribute>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="vkladat_mezery">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="ukladani">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="zalozni_kopie">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="automaticky_ukladat">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="ukladat" type="xs:boolean"/>
+                                                            <xs:attribute name="minuty">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="1"/>
+                                                                        <xs:maxInclusive value="120"/>
+                                                                     </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="jazyk">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="lokalizace">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>                                           
+                                       </xs:element>
+                                       <xs:element name="moduly">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dokoncovani_slov">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="doplnovani_zavorek">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="kontrola_pravopisu">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="statistika_dokumentu">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="vlozit_datum">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="aktualizace">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="kontrola_aktualizaci">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="auto"/>
+                                                                        <xs:enumeration value="man"/>
+                                                                        <xs:enumeration value="disabled"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType> 
+                                       </xs:element>
+                                   </xs:all> 
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="po_spusteni">
+                                <xs:complexType>
+                                   <xs:all>
+                                       <xs:element name="rozhrani">
+                                          <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="pismo">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="font" type="xs:string"/>
+                                                            <xs:attribute name="velikost">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="1"/>
+                                                                        <xs:maxInclusive value="1024"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="vstup">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="text"/>
+                                                                        <xs:enumeration value="kod"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="velikost_okna">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="sirka">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="300"/>
+                                                                        <xs:maxInclusive value="4096"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="vyska">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="200"/>
+                                                                        <xs:maxInclusive value="2304"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="barevne_schema">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="rozsirena_nabidka">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="stavovy_radek">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType> 
+                                       </xs:element>
+                                       <xs:element name="hardware">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="vstupni">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="zarizeni" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>    
+                                                    <xs:element name="vystupni">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="zarizeni" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="dokumenty">
+                                           <xs:complexType>
+                                                <xs:sequence>                                                  
+                                                    <xs:element name="cesta" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                   </xs:all> 
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="user_conf">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nastaveni">
+                                <xs:complexType>
+                                   <xs:all>
+                                       <xs:element name="obsah">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="cislovani_radku">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>                                                   
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>                                       
+                                       <xs:element name="jazyk">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="lokalizace">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>                                           
+                                       </xs:element>
+                                       <xs:element name="moduly">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="kontrola_pravopisu">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:boolean"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                      
+                                   </xs:all> 
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="po_spusteni">
+                                <xs:complexType>
+                                   <xs:all>
+                                       <xs:element name="rozhrani">
+                                          <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="vstup">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="text"/>
+                                                                        <xs:enumeration value="kod"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="velikost_okna">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="sirka">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="300"/>
+                                                                        <xs:maxInclusive value="4096"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="vyska">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:nonNegativeInteger">
+                                                                        <xs:minInclusive value="200"/>
+                                                                        <xs:maxInclusive value="2304"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="barevne_schema">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="hodnota" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                           </xs:complexType> 
+                                       </xs:element>
+                                       <xs:element name="hardware">
+                                           <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="vstupni">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="zarizeni" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>    
+                                                    <xs:element name="vystupni">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="zarizeni" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="dokumenty">
+                                           <xs:complexType>
+                                                <xs:sequence>                                                  
+                                                    <xs:element name="cesta" type="xs:string" minOccurs="1" maxOccurs="unbounded" />    
+                                                </xs:sequence>
+                                           </xs:complexType>
+                                       </xs:element>
+                                   </xs:all> 
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>            
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
